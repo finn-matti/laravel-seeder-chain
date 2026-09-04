@@ -1,0 +1,57 @@
+{
+    "name": "finn-matti/laravel-seeder-chain",
+    "version": "1.0.0",
+    "description": "Dependency-ordered database seeders for Laravel, with context passing between seeders instead of static state or manual call() ordering.",
+    "keywords": [
+        "laravel",
+        "seeder",
+        "seeding",
+        "database",
+        "testing",
+        "factories"
+    ],
+    "homepage": "https://github.com/finn-matti/laravel-seeder-chain",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Martin Hähnel"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "illuminate/contracts": "^10.0|^11.0|^12.0",
+        "illuminate/database": "^10.0|^11.0|^12.0",
+        "illuminate/support": "^10.0|^11.0|^12.0",
+        "symfony/finder": "^6.0|^7.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.0|^9.0|^10.0",
+        "phpunit/phpunit": "^10.0|^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "FinnMatti\\SeederChain\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "FinnMatti\\SeederChain\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "FinnMatti\\SeederChain\\SeederChainServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
